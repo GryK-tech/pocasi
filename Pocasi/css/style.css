@@ -1,0 +1,14 @@
+body {
+	background-image: url("../obrazky/pozadi.png");
+	background-repeat: no-repeat;
+
+}
+h1 {
+	font-size: 100px;
+}
+#tabulka{
+	opacity: 0;
+}
+#tabulka.zobrazit {
+	opacity: 1;
+}
