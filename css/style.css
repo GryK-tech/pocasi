@@ -1,0 +1,116 @@
+/* gluten-regular - latin_latin-ext */
+@font-face {
+	font-display: swap;
+	/* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Gluten';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../font/gluten-v16-latin_latin-ext-regular.woff2') format('woff2');
+	/* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* gluten-800 - latin_latin-ext */
+@font-face {
+	font-display: swap;
+	/* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Gluten';
+	font-style: normal;
+	font-weight: 800;
+	src: url('../font/gluten-v16-latin_latin-ext-800.woff2') format('woff2');
+	/* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+body {
+	font-family: "Gluten";
+	background-image: url("../obrazky/pozadi.png");
+	background-repeat: no-repeat;
+	background-position: 50%;
+	font-size: 20px;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Gluten";
+	text-align: center;
+}
+
+h1 {
+	font-weight: 800;
+	padding-top: 100px;
+	padding-bottom: 10px;
+	font-size: 70px;
+}
+
+h2 {
+	font-size: 30px;
+	padding-bottom: 15px;
+}
+
+
+form {
+	line-height: 1.5;
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+label {
+	padding-bottom: 30px;
+}
+
+input {
+	font-size: 15px;
+}
+
+table {
+	text-align: center;
+	margin: 2px auto;
+}
+
+#tabulka tbody {
+	opacity: 0;
+}
+
+#tabulka.zobrazit tbody {
+	opacity: 1;
+}
+
+#tabulka.zobrazit tbody tr,
+th,
+td {
+	padding: 0px 3px;
+	border-width: 1px;
+	border-style: solid;
+}
+
+#tabulka.zobrazit tbody th {
+	background-color: azure;
+}
+
+@media (min-width:500px) {
+	body {
+		font-size: 30px;
+	}
+
+	h1 {
+		font-weight: 800;
+		padding-top: 100px;
+		padding-bottom: 10px;
+		font-size: 100px;
+	}
+
+	h2 {
+		font-size: 50px;
+		padding-bottom: 30px;
+	}
+
+	label {
+		padding-bottom: 10px;
+	}
+
+}
