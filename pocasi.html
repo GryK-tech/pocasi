@@ -8,34 +8,21 @@
 	<link rel="stylesheet" type="text/css" href="./css/reset.css">
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 	<link rel="shortcut icon" href="./obrazky/pocasi.png" type="image/x-icon">
-	<title>Document</title>
+	<title>Předpověď počasí</title>
 </head>
 
 <body>
 
 	<h1>Jak bude?</h1>
+	<h2>Předpověď počasí na následujících 5 dní</h2>
 
 	<form method="get">
-		<label for="">Zadej město:</label>
-		<input type="text" id="inputHledani" onkeyup="suggestions()" placeholder="Zadej název města...">
+		<label for="inputHledani">Zadej město:</label> <br>
+		<input type="text" id="inputHledani" onkeyup="naseptavac()" placeholder="Zadej název města...">
 		<div id="seznamNavrhu"></div>
 	</form>
-	<table id="tabulka">
-		<tr>
-			<th id="jedna"></th>
-			<th id="dva"></th>
-			<th id="tri"></th>
-			<th id="ctyri"></th>
-			<th id="pet"></th>
-		</tr>
-		<tr>
-			<td id="denJedna"></td>
-			<td id="denDva"></td>
-			<td id="denTri"></td>
-			<td id="denCtyri"></td>
-			<td id="denPet"></td>
-		</tr>
-	</table>
+
+	<table id="tabulka"> </table>
 
 </body>
 
