@@ -7,7 +7,7 @@ let UdajeKPouziti = [];
 
 
 // Načtení JSON souboru
-fetch('dataMesta.json')
+fetch('city.list.json')
 	.then(response => response.json())
 	.then(jsonData => {
 		souborMest = jsonData;
@@ -70,10 +70,22 @@ function naseptavac() {
 					UdajeKPouziti.push(UdajeOPocasi[32]);
 					//console.log(UdajeKPouziti);
 
-					let uvnitrTabulky = "<tr>";
+					let uvnitrTabulky = "<tr> <th> Datum a čas </th> <th> Teplota </th> <tr> <tr>";
 					UdajeKPouziti.forEach(udaj => {
+						const datumTextovy = udaj.dt_txt;
+						const [castDatum, castCas] = datumTextovy.split(' '); // Rozdělíme na datum a čas
+						const [rok, mesic, den] = castDatum.split('-').map(Number); // Extrahujeme rok, měsíc, den
+						const [hodiny, minuty, sekundy] = castCas.split(':').map(Number); // Extrahujeme hodiny, minuty, sekundy
 
-						uvnitrTabulky += `<th> ${udaj.dt_txt} </th> <td> ${udaj.main.temp} °C </td>`;
+						// Vytvoříme nový Date objekt
+						const date = new Date(rok, mesic - 1, den, hodiny, minuty, sekundy); // Měsíc - 1, protože je indexován od 0
+
+						// Formátování datum a času
+						const datum = date.toLocaleDateString('cs-CZ');
+						const cas = date.toLocaleTimeString('cs-CZ', { hour: '2-digit', minute: '2-digit' });
+
+						//console.log(`Datum: ${datum}, Čas: ${cas}`);						
+						uvnitrTabulky += `<td> ${datum} ${cas}</td> <td> ${udaj.main.temp} °C </td>`;
 						uvnitrTabulky += "</tr>";
 					})
 
