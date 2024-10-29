@@ -113,4 +113,8 @@ td {
 		padding-bottom: 10px;
 	}
 
+	input {
+		font-size: 20px;
+	}
+
 }
