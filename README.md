@@ -1,5 +1,5 @@
 # pocasi
-# popis:
+# Popis:
 Jedná se o jednoduchou stránku s inputem, do kterého napíšete název města, zvolíte město z našeptávače a ukáže se jednoduchá tabulka předpovědi teploty na dalších 5 dní. Tabulka obsahuje datum, čas a teplotu. 
 # Jak jednotlivé části funngují:
 Počasí.html
